@@ -11,7 +11,7 @@ library(dplyr)
 m
 top <- m%>%select(Var1, Var2, value)%>%filter(value != 1)
 top[order(top$value, decreasing = T)[1:10],]
-# District~Beat, Ward~District, Ward~Beat, Latitude ~Ward, Latitude~District are top5 attributes with highest correclation\
+# District~Beat, Ward~District, Ward~Beat, Latitude ~Ward, Latitude~District are top5 attributes with highest correlation
 x <- as.data.frame(table(Crimes$Description))
 x[order(x$Freq, decreasing = T)[1:3],]
 # $500 and Under and  Domestic Battery Simple are the top 3 reasons for having more crime
